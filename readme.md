@@ -1,4 +1,4 @@
-# Satellite Movement Labeler and Visualizer
+# Detection and Prediction of Satellite Anomalies
 
 This project will contain the commits of the process of training and evaluating a model that can visualize satellite movement and label movement. Currently the project is working on retrieving TLE data from [space-track.org](https://www.space-track.org/auth/login) and cleaning it to prepare it for the use in training on a model.
 
@@ -12,6 +12,11 @@ The end goals of this project is to:
 ![Sample display of a satellite's movement](https://cdn.discordapp.com/attachments/1048496883548557403/1191237694710353950/image.png?ex=65a4b58e&is=6592408e&hm=c9c74dd15aeb20c1b153e265eca4c054bbd1403828ea0d77e9dabde6dad7e2ff&)
     where the notation I<E/W> represents the start of the satellite's shift in the East/West direction and E<E/W> represents the end of the satellite's shift in the East/West direction.
 
+## Requirements:
+
+* Python 3.#.#
+* Pyephem 9.99
+* Pandas 1.5.3
 
 ## Credits:
 
