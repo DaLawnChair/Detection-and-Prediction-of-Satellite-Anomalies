@@ -1,7 +1,6 @@
 import ephem #Calculations for TLE to longitude and latitude
 import pandas as pd #For tme .csv file 
 
-
 """
 NOTE: the error with the time is because its the FRACTIONAL period of the day, not the day in MILLISECONDS!!
 """
@@ -15,7 +14,8 @@ def isLunar(year):
         return False
     else:
         return False
-
+        
+        
 def format(data):
     """Formats the date/time so there is at least 2 digits"""
     if(len(str(data)) == 1):
@@ -103,7 +103,7 @@ def calculateDate(date):
     return f"{year}-{format(month)}-{format(day)} {format(times[0])}:{format(times[1])}:{format(times[2])}.{format(times[3])}"
 
 
-
+    
 #dataset = "/home/johnzhou/QMind/ISS-data-1998-11-20-to-2023-12-26.txt"
 #csvOutput = "/home/johnzhou/QMind/ISS-converted.csv"
 dataset = "/home/johnzhou/Satellite-Movement-Labeler-and-Visualizer/general-satellites.txt"
@@ -150,7 +150,7 @@ csvData = pd.DataFrame({
     "Longitude": longitudes,
     "Latitude": latitudes
 })
-
+print(len(satelliteNumbers))
 #convert string datetime representation to actual datetime
 csvData["Datetime"] = pd.to_datetime(csvData["Datetime"], format="%Y-%m-%d %H:%M:%S.%f")
 
